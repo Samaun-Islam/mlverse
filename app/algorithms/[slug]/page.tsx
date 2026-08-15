@@ -3,12 +3,15 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, FileText } from "lucide-react";
 import { algorithms } from "@/lib/algorithms";
 import LinearRegressionDemo from "@/components/LinearRegressionDemo";
+import LogisticRegressionDemo from "@/components/LogisticRegressionDemo";
+import DecisionTreeDemo from "@/components/DecisionTreeDemo";
+import KnnAlgorithmDemo from "@/components/KnnAlgorithmDemo";
+import KMeansDemo from "@/components/KMeansDemo";
+import NaiveBayesDemo from "@/components/NaiveBayesDemo";
 
 export function generateStaticParams() {
   return algorithms.map((a) => ({ slug: a.slug }));
 }
-
-const DEMO_SLUGS = ["linear-regression"];
 
 export default async function AlgorithmDetailPage({
   params,
@@ -72,13 +75,11 @@ export default async function AlgorithmDetailPage({
 
       <div className="mt-10">
         {slug === "linear-regression" && <LinearRegressionDemo />}
-        {!DEMO_SLUGS.includes(slug) && (
-          <div className="bg-gray-900/60 border border-gray-800 rounded-2xl p-12 text-center">
-            <p className="text-gray-400">
-              🚧 এই algorithm-এর interactive demo শীঘ্রই আসছে।
-            </p>
-          </div>
-        )}
+        {slug === "logistic-regression" && <LogisticRegressionDemo />}
+        {slug === "decision-tree" && <DecisionTreeDemo />}
+        {slug === "knn" && <KnnAlgorithmDemo />}
+        {slug === "k-means" && <KMeansDemo />}
+        {slug === "naive-bayes" && <NaiveBayesDemo />}
       </div>
     </main>
   );

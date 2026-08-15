@@ -13,7 +13,6 @@ function mulberry32(seed: number) {
   };
 }
 
-// Box-Muller দিয়ে normal distribution বানানো (গোলাকার cluster তৈরির জন্য)
 function gaussianRandom(rand: () => number, mean: number, std: number) {
   const u1 = Math.max(rand(), 1e-9);
   const u2 = rand();
@@ -24,7 +23,6 @@ function gaussianRandom(rand: () => number, mean: number, std: number) {
 export const CLASS_NAMES = ["Class A", "Class B", "Class C"];
 export const CLASS_COLORS = ["#818cf8", "#fb923c", "#34d399"];
 
-// তিনটা ক্লাস, প্রতিটার একটা কেন্দ্র (centroid), তার চারপাশে ছড়ানো পয়েন্ট
 export function generateTrainingData(): LabeledPoint[] {
   const rand = mulberry32(55);
   const centers = [
@@ -50,7 +48,6 @@ function distance(a: { x: number; y: number }, b: { x: number; y: number }) {
   return Math.hypot(a.x - b.x, a.y - b.y);
 }
 
-// একটা নির্দিষ্ট বিন্দুর ক্লাস predict করা — K-নিকটতম প্রতিবেশী খুঁজে majority vote
 export function classifyPoint(
   point: { x: number; y: number },
   trainingData: LabeledPoint[],
@@ -81,8 +78,6 @@ export interface GridCell {
   label: number;
 }
 
-// পুরো এলাকা জুড়ে একটা grid বানিয়ে, প্রতিটা বিন্দুতে classify করে
-// decision boundary "region" হিসেবে দেখানো হচ্ছে
 export function computeDecisionGrid(
   trainingData: LabeledPoint[],
   k: number,
@@ -98,4 +93,21 @@ export function computeDecisionGrid(
     }
   }
   return grid;
+}
+
+export interface NeighborInfo {
+  point: LabeledPoint;
+  distance: number;
+}
+
+// Query point থেকে সবচেয়ে কাছের K-টা প্রতিবেশী, দূরত্ব সহ বের করা
+export function getNearestNeighbors(
+  point: { x: number; y: number },
+  trainingData: LabeledPoint[],
+  k: number
+): NeighborInfo[] {
+  return trainingData
+    .map((p) => ({ point: p, distance: distance(point, p) }))
+    .sort((a, b) => a.distance - b.distance)
+    .slice(0, k);
 }
