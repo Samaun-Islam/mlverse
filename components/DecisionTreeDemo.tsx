@@ -116,19 +116,18 @@ export default function DecisionTreeDemo() {
               className="w-full accent-indigo-500"
             />
             <p className="text-xs text-gray-500 mt-1">
-              গাছ যত গভীর হবে, সীমানা তত জটিল ও নিখুঁত হবে
+              The deeper the tree, the more complex and precise the decision boundary becomes.
             </p>
           </div>
 
           <div className="text-xs text-gray-400 leading-relaxed bg-gray-800/60 rounded-xl p-4 space-y-2">
             <p>
-              <strong className="text-gray-200">কম Depth (1-2):</strong>{" "}
-              সরল, বড় বড় আয়তক্ষেত্রাকার অঞ্চল — underfitting হতে পারে।
+              <strong className="text-gray-200"> Lower Depth (1-2):</strong>{" "}
+              Simple, large rectangular regions, which may lead to underfitting.
             </p>
             <p>
-              <strong className="text-gray-200">বেশি Depth (5-6):</strong>{" "}
-              অনেক ছোট ছোট অঞ্চল, প্রায় প্রতিটা পয়েন্ট আলাদা — overfitting-এর
-              ঝুঁকি।
+              <strong className="text-gray-200">Higher Depth (5-6):</strong>{" "}
+             Many small regions, with almost every point treated separately, increasing the risk of overfitting.
             </p>
           </div>
         </div>
@@ -137,7 +136,7 @@ export default function DecisionTreeDemo() {
       {/* Tree diagram */}
       <div className="bg-gray-900/60 border border-gray-800 rounded-2xl p-4 sm:p-6">
         <p className="text-sm font-medium text-gray-300 mb-4">
-          এই সীমানার পেছনের আসল সিদ্ধান্ত-গাছ
+          The actual decision tree behind this boundary
         </p>
         <TreeDiagram tree={tree} />
       </div>

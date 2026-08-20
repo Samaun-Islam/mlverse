@@ -31,8 +31,7 @@ export default function BiasVarianceDemo() {
     <div className="space-y-8">
       <div className="bg-gray-900/60 border border-gray-800 rounded-2xl p-4 sm:p-6">
         <p className="text-sm text-gray-400 mb-4">
-          একই সমস্যার ৬টা আলাদা (একটু ভিন্ন noise-যুক্ত) dataset দিয়ে ফিট করা
-          মডেল — এদের মধ্যে ছড়িয়ে থাকাটাই{" "}
+          The spread among models fitted on six different datasets with the same underlying problem but slightly different noise is called Variance.{" "}
           <strong className="text-gray-200">Variance</strong>
         </p>
         <ResponsiveContainer width="100%" height={280}>
@@ -193,18 +192,15 @@ export default function BiasVarianceDemo() {
 
           <div className="text-xs text-gray-400 leading-relaxed bg-gray-800/60 rounded-xl p-4 space-y-2.5">
             <p>
-              <strong className="text-orange-300">Bias²</strong> বেশি মানে
-              মডেল খুব সাধারণ, systematically ভুল করছে (underfitting দিকে)।
+              <strong className="text-orange-300">Bias²</strong> A high value means the model is too simple and makes systematic errors (tends toward underfitting).
             </p>
             <p>
-              <strong className="text-fuchsia-300">Variance</strong> বেশি
-              মানে মডেল dataset-এর ছোট বদলেও অনেক আলাদা prediction দেয়
-              (overfitting দিকে)।
+              <strong className="text-fuchsia-300">Variance</strong> A high value means the model gives very different predictions even with small changes in the dataset (tends toward overfitting).
             </p>
             <p>
-              সেরা degree হলো যেখানে{" "}
+              The best degree is where{" "}
               <strong className="text-indigo-300">Total Error</strong>{" "}
-              সবচেয়ে কম — সাদা ড্যাশড লাইনটা সেই degree-তে নিয়ে যাও।
+              The lowest value=take the white dashed line to that degree.
             </p>
           </div>
         </div>

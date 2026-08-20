@@ -21,8 +21,7 @@ export default function AlgorithmsPage() {
           Algorithms
         </h1>
         <p className="mt-3 text-gray-400 leading-relaxed">
-          যেসব algorithm আসলে ML-এর engine চালায় — কীভাবে তারা চিন্তা করে,
-          আর কোথায় সবচেয়ে ভালো কাজ করে।
+         The algorithms that actually power ML how they work and where they perform best.
         </p>
       </motion.div>
 

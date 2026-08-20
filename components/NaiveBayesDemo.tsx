@@ -30,7 +30,7 @@ export default function NaiveBayesDemo() {
       <div className="space-y-6">
         <div className="bg-gray-900/60 border border-gray-800 rounded-2xl p-6">
           <p className="text-sm font-medium text-gray-300 mb-4">
-            মেসেজে কোন কোন শব্দ আছে, সেগুলো বেছে নাও
+            Choose which words are present in the message.
           </p>
           <div className="flex flex-wrap gap-2">
             {VOCABULARY.map((word) => {
@@ -55,7 +55,7 @@ export default function NaiveBayesDemo() {
         {/* Per-word breakdown table */}
         <div className="bg-gray-900/60 border border-gray-800 rounded-2xl p-6">
           <p className="text-sm font-medium text-gray-300 mb-4">
-            প্রতিটা শব্দ কীভাবে হিসাবে অবদান রাখছে
+            How each word contributes to the calculation.
           </p>
           <div className="space-y-1.5 max-h-64 overflow-y-auto pr-1">
             {result.steps.map((step) => (
@@ -70,7 +70,7 @@ export default function NaiveBayesDemo() {
                     step.present ? "text-indigo-300" : "text-gray-500"
                   }`}
                 >
-                  {step.word} {step.present ? "✓ আছে" : "· নেই"}
+                  {step.word} {step.present ? "✓ Available" : ". Not Available"}
                 </span>
                 <span className="text-gray-500 font-mono">
                   P(spam)={step.spamProbability.toFixed(2)} · P(ham)=
@@ -121,9 +121,7 @@ export default function NaiveBayesDemo() {
             {model.priorHam.toFixed(2)}
           </p>
           <p>
-            প্রতিটা শব্দের probability গুণ করে (Naive assumption: শব্দগুলো
-            একে অপরের থেকে independent), শেষে normalize করে চূড়ান্ত ফলাফল
-            বের করা হচ্ছে।
+            Each word’s probability is multiplied together (under the naive assumption that the words are independent), and then the result is normalized to get the final prediction.
           </p>
         </div>
       </div>

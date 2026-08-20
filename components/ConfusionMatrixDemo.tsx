@@ -26,7 +26,7 @@ export default function ConfusionMatrixDemo() {
         {/* Confusion matrix grid */}
         <div className="bg-gray-900/60 border border-gray-800 rounded-2xl p-6">
           <p className="text-sm font-medium text-gray-300 mb-5">
-            নিজের মতো সংখ্যা বসাও, নিচের ফলাফল সাথে সাথে বদলে যাবে
+            Enter your own numbers: 
           </p>
 
           <div className="grid grid-cols-[auto_1fr_1fr] gap-2 max-w-md">
@@ -81,22 +81,22 @@ export default function ConfusionMatrixDemo() {
           <MetricCard
             label="Accuracy"
             value={metrics.accuracy}
-            hint="সব prediction-এর মধ্যে কতটা সঠিক"
+            hint="How many of the predictions are correct"
           />
           <MetricCard
             label="Precision"
             value={metrics.precision}
-            hint="Positive বলা predictions-এর মধ্যে কতটা আসলেই সঠিক"
+            hint="Of the predictions labeled positive, how many are actually correct"
           />
           <MetricCard
             label="Recall"
             value={metrics.recall}
-            hint="আসল সব Positive-এর মধ্যে কতটা ধরতে পেরেছে"
+            hint="Of all the actual positives, how many were correctly identified"
           />
           <MetricCard
             label="F1-Score"
             value={metrics.f1}
-            hint="Precision ও Recall-এর harmonic mean"
+            hint="Precision and Recall of harmonic mean"
             highlight
           />
         </div>
@@ -105,7 +105,7 @@ export default function ConfusionMatrixDemo() {
       {/* Right: Presets */}
       <div className="bg-gray-900/60 border border-gray-800 rounded-2xl p-6 h-fit space-y-3">
         <p className="text-sm font-medium text-gray-300 mb-1">
-          বাস্তব উদাহরণ দিয়ে চেষ্টা করো
+          Try it with a real-world example.
         </p>
         {presets.map((preset) => (
           <motion.button

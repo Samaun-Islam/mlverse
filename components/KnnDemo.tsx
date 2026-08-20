@@ -100,7 +100,7 @@ export default function KnnDemo() {
         <div>
           <div className="flex justify-between mb-2">
             <label className="text-sm font-medium text-gray-300">
-              K (কতগুলো প্রতিবেশী দেখবে)
+              K (How many neighbors to consider)
             </label>
             <span className="text-sm font-mono text-indigo-400">{k}</span>
           </div>
@@ -117,13 +117,10 @@ export default function KnnDemo() {
 
         <div className="text-xs text-gray-400 leading-relaxed bg-gray-800/60 rounded-xl p-4 space-y-2">
           <p>
-            <strong className="text-gray-200">ছোট K (1-3):</strong> সীমানা
-            অসমান, খাঁজকাটা — প্রতিটা বিন্দুকে খুব বেশি গুরুত্ব দেয়, noise-এর
-            প্রতি sensitive।
+            <strong className="text-gray-200">Small K (1-3):</strong> An uneven, jagged boundary it gives too much importance to individual points and is sensitive to noise.
           </p>
           <p>
-            <strong className="text-gray-200">বড় K (20+):</strong> সীমানা
-            মসৃণ, কিন্তু ছোট ক্লাস্টার হারিয়ে যেতে পারে (over-smoothing)।
+            <strong className="text-gray-200">Big K (20+):</strong> Smoother, but small clusters may be lost (over-smoothing).।
           </p>
         </div>
       </div>

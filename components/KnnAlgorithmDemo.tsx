@@ -66,7 +66,7 @@ export default function KnnAlgorithmDemo() {
       {/* Chart */}
       <div className="bg-gray-900/60 border border-gray-800 rounded-2xl p-4 sm:p-6">
         <p className="text-sm font-medium text-gray-300 mb-3">
-          চার্টে যেকোনো জায়গায় ক্লিক করে একটা নতুন query point বসাও
+         Click anywhere on the chart to place a new query point.
         </p>
 
         <svg
@@ -160,7 +160,7 @@ export default function KnnAlgorithmDemo() {
           ))}
           <span className="flex items-center gap-1.5">
             <span className="w-3 h-3 rounded-full border-2 border-gray-100 bg-gray-600" />
-            Query point (তোমার ক্লিক)
+            Query point 
           </span>
         </div>
       </div>
@@ -203,7 +203,7 @@ export default function KnnAlgorithmDemo() {
 
         <div>
           <p className="text-xs font-medium text-gray-400 mb-2">
-            নিকটতম {k}-টা প্রতিবেশীর ভোট
+            The vote of the 5 nearest neighbors
           </p>
           <div className="space-y-1.5 max-h-48 overflow-y-auto pr-1">
             {neighbors.map((n, i) => (

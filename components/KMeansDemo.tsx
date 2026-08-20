@@ -138,7 +138,7 @@ export default function KMeansDemo() {
         <div>
           <div className="flex justify-between mb-2">
             <label className="text-sm font-medium text-gray-300">
-              K (কতগুলো cluster)
+              K (Number of  cluster)
             </label>
             <span className="text-sm font-mono text-indigo-400">{k}</span>
           </div>
@@ -184,16 +184,14 @@ export default function KMeansDemo() {
 
         <div className="text-xs text-gray-400 leading-relaxed bg-gray-800/60 rounded-xl p-4 space-y-2">
           <p>
-            <strong className="text-gray-200">বড় বৃত্ত</strong> হলো
-            centroid — প্রতিটা cluster-এর কেন্দ্র।
+            <strong className="text-gray-200">Big Circle</strong>is
+            centroid The center of each cluster.
           </p>
           <p>
-            Play চাপলে দেখবে প্রতিটা ধাপে centroid গুলো নিজের কাছের
-            পয়েন্টগুলোর গড় (average) অবস্থানে সরে যাচ্ছে।
+            Press Play to see the centroids move toward the average position of their nearest points at each step.
           </p>
           <p>
-            Reset বাটনে নতুন random শুরু-বিন্দু থেকে আবার শুরু হবে — খেয়াল
-            করো, কখনো কখনো ভিন্ন শুরু-বিন্দু থেকে ভিন্ন ফলাফলও আসতে পারে!
+            The Reset button starts again with new random initial positions. Notice that different starting positions can sometimes lead to different results!
           </p>
         </div>
       </div>

@@ -153,20 +153,17 @@ export default function TrainTestSplitDemo() {
             className="w-full accent-indigo-500"
           />
           <p className="text-xs text-gray-500 mt-1">
-            বেশি train data মানে ভালো মডেল, কিন্তু কম test data মানে অবিশ্বাস্য accuracy পরিমাপ
+            e training data generally means a better-trained model, but too little test data makes the accuracy measurement unreliable.
           </p>
         </div>
 
         <div className="text-xs text-gray-400 leading-relaxed bg-gray-800/60 rounded-xl p-4 space-y-2.5">
           <p>
-            মোট <strong className="text-gray-200">{allPoints.length}টা</strong>{" "}
-            পয়েন্ট আছে — split ratio বদলালে কোনটা train, কোনটা test সেটাও বদলে
-            যাবে।
+            Toal <strong className="text-gray-200">{allPoints.length}</strong>{" "}
+            Point = Changing the split ratio will also change which data points are used for training and which are used for testing.
           </p>
           <p>
-            Split অনেক কম (যেমন 10/90) হলে মডেল ভালো শিখতে পারে না। Split
-            অনেক বেশি (যেমন 90/10) হলে test set এত ছোট হয়ে যায় যে accuracy-র
-            উপর ভরসা করা যায় না।
+            if the training split is too small (e.g., 10/90), the model cannot learn well. If the training split is too large (e.g., 90/10), the test set becomes so small that the accuracy measurement becomes unreliable.
           </p>
         </div>
       </div>

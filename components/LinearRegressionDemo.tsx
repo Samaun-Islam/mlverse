@@ -61,7 +61,7 @@ export default function LinearRegressionDemo() {
       {/* Chart */}
       <div className="bg-gray-900/60 border border-gray-800 rounded-2xl p-4 sm:p-6">
         <p className="text-sm font-medium text-gray-300 mb-3">
-          চার্টের যেকোনো জায়গায় ক্লিক করে নতুন ডেটা পয়েন্ট বসাও
+          Click anywhere on the chart to add a new data point.
         </p>
 
         <svg
@@ -191,7 +191,7 @@ export default function LinearRegressionDemo() {
             y = {result.slope.toFixed(2)}x + {result.intercept.toFixed(2)}
           </p>
           <p>
-            R² যত ১-এর কাছাকাছি, রেখাটা তত ভালোভাবে ডেটা ব্যাখ্যা করছে।
+            The closer R² is to 1, the better the line explains the data.
           </p>
         </div>
 

@@ -182,20 +182,17 @@ export default function LogisticRegressionDemo() {
             className="w-full accent-indigo-500"
           />
           <p className="text-xs text-gray-500 mt-1">
-            Probability এই মানের উপরে গেলে &quot;Pass&quot; predict করা হবে
+            If the probability exceeds this value, the model predicts &quot;Pass&quot;
           </p>
         </div>
 
         <div className="text-xs text-gray-400 leading-relaxed bg-gray-800/60 rounded-xl p-4 space-y-2">
           <p>
-            <strong className="text-gray-200">Threshold কমালে:</strong> বেশি
-            শিক্ষার্থীকে &quot;Pass&quot; বলা হবে, কিন্তু ভুল Pass predict
-            হওয়ার সম্ভাবনা বাড়বে।
+            <strong className="text-gray-200">Threshold Decresse:</strong> More students will be predicted as &quot;Pass&qout; but the chance of false-positive predictions will increase.
           </p>
           <p>
-            <strong className="text-gray-200">Threshold বাড়ালে:</strong>{" "}
-            মডেল আরও রক্ষণশীল (conservative) হবে, নিশ্চিত না হলে
-            &quot;Fail&quot; বলবে।
+            <strong className="text-gray-200">Threshold Increase:</strong>{" "}
+            The model will be more conservative,if it is not confident, it will predict &qout;Fail&qout;
           </p>
         </div>
 
@@ -209,7 +206,7 @@ export default function LogisticRegressionDemo() {
           className="w-full inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-semibold shadow-md shadow-indigo-950"
         >
           <RotateCcw className="w-4 h-4" />
-          নতুন ডেটা দিয়ে আবার শুরু
+          Start again with new data.
         </motion.button>
       </div>
     </div>

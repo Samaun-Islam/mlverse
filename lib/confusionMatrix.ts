@@ -31,23 +31,23 @@ export function computeMetrics(counts: ConfusionCounts): ConfusionMetrics {
 // কয়েকটা preset scenario, যাতে user বাস্তব উদাহরণ দিয়ে বুঝতে পারে
 export const presets: { name: string; description: string; counts: ConfusionCounts }[] = [
   {
-    name: "ভারসাম্যপূর্ণ মডেল",
-    description: "মোটামুটি ভালো, ব্যালেন্সড পারফরম্যান্স",
+    name: "Balanced Model",
+    description: "Fairly good, balanced performance",
     counts: { tp: 45, fp: 8, tn: 42, fn: 5 },
   },
   {
-    name: "স্প্যাম ফিল্টার (High Precision দরকার)",
-    description: "ভুলে গুরুত্বপূর্ণ মেইল স্প্যাম বলা যাবে না (FP কম হওয়া দরকার)",
+    name: "Spam filter (High precision is important)",
+    description: "Important emails must not be mistakenly classified as spam (low FP is important)",
     counts: { tp: 30, fp: 2, tn: 60, fn: 8 },
   },
   {
-    name: "রোগ শনাক্তকরণ (High Recall দরকার)",
-    description: "কোনো আক্রান্ত রোগীকে miss করা যাবে না (FN কম হওয়া দরকার)",
+    name: "Disease detection (High recall is important).",
+    description: "No affected patient should be missed (low FN is important)",
     counts: { tp: 38, fp: 15, tn: 40, fn: 2 },
   },
   {
-    name: "Imbalanced ডেটাসেট ফাঁদ",
-    description: "Accuracy বেশি দেখালেও আসলে মডেল প্রায় কিছুই ধরতে পারছে না",
+    name: "The Imbalanced Dataset Trap",
+    description: "Even with high accuracy, the model may actually be detecting almost nothing.",
     counts: { tp: 2, fp: 1, tn: 95, fn: 2 },
   },
 ];

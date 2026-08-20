@@ -31,7 +31,7 @@ export const algorithms: Algorithm[] = [
     title: "Linear Regression",
     category: "Supervised",
     shortDescription:
-      "একটা সরল রেখা কীভাবে ডেটার মধ্য দিয়ে সবচেয়ে ভালোভাবে fit হয়ে যায়, লাইভ দেখো।",
+      "See live how a straight line can best fit the data points.",
     icon: TrendingUp,
     gradient: "from-indigo-500 to-blue-500",
     notes: [
@@ -72,7 +72,7 @@ export const algorithms: Algorithm[] = [
     title: "Logistic Regression",
     category: "Supervised",
     shortDescription:
-      "একটা S-আকৃতির curve কীভাবে হ্যাঁ/না সিদ্ধান্ত নেয়, sigmoid function দিয়ে।",
+      "See how an S-shaped curve makes yes/no decisions using the sigmoid function.",
     icon: Waves,
     gradient: "from-blue-500 to-cyan-500",
     notes: [
@@ -113,7 +113,7 @@ export const algorithms: Algorithm[] = [
     title: "Decision Tree",
     category: "Supervised",
     shortDescription:
-      "ধাপে ধাপে প্রশ্ন করে করে কীভাবে একটা গাছের মতো কাঠামো সিদ্ধান্ত নেয়।",
+      "See how a tree-like structure makes decisions by asking questions step by step.",
     icon: GitFork,
     gradient: "from-cyan-500 to-teal-500",
     notes: [
@@ -154,7 +154,7 @@ export const algorithms: Algorithm[] = [
     title: "K-Nearest Neighbors",
     category: "Supervised",
     shortDescription:
-      "আশেপাশের K-টা প্রতিবেশী দেখেই একটা নতুন বিন্দুর ক্লাস ঠিক করে ফেলে।",
+      "It determines the class of a new point by looking at its K nearest neighbors.",
     icon: Target,
     gradient: "from-purple-500 to-indigo-500",
     notes: [
@@ -195,7 +195,7 @@ export const algorithms: Algorithm[] = [
     title: "K-Means Clustering",
     category: "Unsupervised",
     shortDescription:
-      "কোনো লেবেল ছাড়াই ডেটা নিজে থেকে কীভাবে ক্লাস্টারে ভাগ হয়ে যায়।",
+      "How data automatically forms clusters without any labels.",
     icon: CircleDot,
     gradient: "from-fuchsia-500 to-purple-500",
     notes: [
@@ -236,7 +236,7 @@ export const algorithms: Algorithm[] = [
     title: "Naive Bayes",
     category: "Supervised",
     shortDescription:
-      "সম্ভাব্যতা (probability) হিসাব করে কীভাবে দ্রুত শ্রেণীবিভাগ করে ফেলে।",
+      "How it quickly classifies data by calculating probabilities.",
     icon: Mail,
     gradient: "from-pink-500 to-fuchsia-500",
     notes: [
